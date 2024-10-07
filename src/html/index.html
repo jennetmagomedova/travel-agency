@@ -1,0 +1,2698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--datepicker-->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <!--swiper-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/index.bundle.js" defer></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Travellian</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <a href="#" class="header__logo logo">
+          <img
+            src="./../img/logo-white.svg"
+            alt="Travellian"
+            class="logo__image"
+            width="140"
+            height="28"
+            loading="lazy"
+          />
+        </a>
+        <nav class="header__menu hidden-desktop">
+          <ul class="header__menu-list">
+            <li class="header__menu-item active">
+              <a href="#" class="header__menu-link">Home</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Explore</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Travel</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Blog</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Pricing</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__controls hidden-desktop">
+          <button class="header__button button" type="button">Login</button>
+          <button
+            class="header__button header__button-primary button button-primary"
+            type="button"
+          >
+            Sign up
+          </button>
+        </div>
+        <button
+          class="header__burger-button burger-button visible-desktop"
+          type="button"
+          onclick="mobileOverlay.showModal()"
+        >
+          <div class="visually-hidden">Open menu</div>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="hero section">
+        <div class="container">
+          <h1 class="hero__title">
+            Start your unforgettable<br />journey with us.
+          </h1>
+          <div class="hero__description">
+            <p>The best travel for your jouney begins now</p>
+          </div>
+          <div class="book-now">
+            <form class="book-now__form">
+              <div class="book-now__form-wrapper">
+                <div class="book-now__form-body">
+                  <div class="book-now__field field">
+                    <label for="destination" class="field__label"
+                      >Destination</label
+                    >
+                    <input
+                      type="text"
+                      class="field__input"
+                      id="destination"
+                      placeholder="Dubai"
+                    />
+                  </div>
+                  <div class="book-now__field field">
+                    <label for="person" class="field__label">Person</label>
+                    <select class="field__input field__input-down" id="person">
+                      <option value="1">1</option>
+                      <option value="2" selected>2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+                  <div class="book-now__field field">
+                    <label for="checkIn" class="field__label">Check in</label>
+                    <input
+                      type="text"
+                      class="field__input field__input-down"
+                      id="checkIn"
+                      placeholder="Sun, 17th Sep 2020"
+                    />
+                  </div>
+                  <div class="book-now__field field">
+                    <label for="checkOut" class="field__label">Check Out</label>
+                    <input
+                      type="text"
+                      class="field__input field__input-down"
+                      id="checkOut"
+                      placeholder="Tue, 17th Oct 2020"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  class="book-now__button button button-primary"
+                  type="submit"
+                >
+                  <span>Book Now</span>
+                  <svg
+                    width="60"
+                    height="44"
+                    viewBox="0 0 60 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_65_4204)">
+                      <path
+                        d="M59.2012 23.7466C60.2662 22.6816 60.2662 20.9548 59.2012 19.8897L41.8448 2.53342C40.7798 1.46835 39.0532 1.46835 37.9879 2.53342C36.9229 3.5985 36.9229 5.3253 37.9879 6.39035L53.4158 21.8182L37.9879 37.2461C36.9229 38.3111 36.9229 40.0377 37.9879 41.103C39.0532 42.168 40.7798 42.168 41.8448 41.103L59.2012 23.7466ZM4.76852e-07 24.5454H57.2727V19.0909H0L4.76852e-07 24.5454Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_65_4204">
+                        <rect width="60" height="43.6364" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Popular Destinations</h2>
+            <div class="section__description">
+              Most popular destinations around the world, from historical places
+              to&#160;natural wonders.
+            </div>
+          </header>
+          <div class="section__body popular">
+            <div class="section__controls">
+              <button
+                class="swiper-button-prev section__button button button-dark"
+                type="button"
+              >
+                <span class="visually-hidden"> Previous slide </span>
+                <svg
+                  width="12"
+                  height="22"
+                  viewBox="0 0 12 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 1L1 11L11 21"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                class="swiper-button-next section__button button button-primary"
+                type="button"
+              >
+                <span class="visually-hidden"> Next slide </span>
+                <svg
+                  width="12"
+                  height="22"
+                  viewBox="0 0 12 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 21L11 11L0.999999 1"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="swiper" id="swiperPopular">
+              <div class="swiper-wrapper popular__list">
+                <div class="swiper-slide popular__item">
+                  <a href="#" class="popular__link">
+                    <span class="visually-hidden">Monument of&#160;Berlin</span>
+                    <article class="popular__card">
+                      <picture>
+                        <source
+                          srcset="./../img/destination/1.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/destination/1.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="popular__img"
+                          src="./../img/destination/1.jpg"
+                          alt="Monument of Berlin"
+                          loading="lazy"
+                        />
+                      </picture>
+                      <div class="popular__description">
+                        <div class="popular__name">Monument of&#160;Berlin</div>
+                        <div class="popular__location">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z"
+                              fill="white"
+                            />
+                          </svg>
+                          <span>Berlin, Germany</span>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+                <div class="swiper-slide popular__item">
+                  <a href="#" class="popular__link">
+                    <span class="visually-hidden">Millennium Bridge</span>
+                    <article class="popular__card">
+                      <picture>
+                        <source
+                          srcset="./../img/destination/2.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/destination/2.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="popular__img"
+                          src="./../img/destination/2.jpg"
+                          alt="Millennium Bridge"
+                          loading="lazy"
+                        />
+                      </picture>
+                      <div class="popular__description">
+                        <div class="popular__name">Millennium Bridge</div>
+                        <div class="popular__location">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z"
+                              fill="white"
+                            />
+                          </svg>
+                          <span>London, United Kingdom</span>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+                <div class="swiper-slide popular__item">
+                  <a href="#" class="popular__link">
+                    <span class="visually-hidden">Rialto Bridge</span>
+                    <article class="popular__card">
+                      <picture>
+                        <source
+                          srcset="./../img/destination/3.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/destination/3.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="popular__img"
+                          src="./../img/destination/3.jpg"
+                          alt="Rialto Bridge"
+                          loading="lazy"
+                        />
+                      </picture>
+
+                      <div class="popular__description">
+                        <div class="popular__name">Rialto Bridge</div>
+                        <div class="popular__location">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z"
+                              fill="white"
+                            />
+                          </svg>
+                          <span>Venice, Italy</span>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+                <div class="swiper-slide popular__item">
+                  <a href="#" class="popular__link">
+                    <span class="visually-hidden">Bali</span>
+                    <article class="popular__card">
+                      <picture>
+                        <source
+                          srcset="./../img/destination/4.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/destination/4.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="popular__img"
+                          src="./../img/destination/4.jpg"
+                          alt="Bali"
+                          loading="lazy"
+                        />
+                      </picture>
+                      <div class="popular__description">
+                        <div class="popular__name">Bali</div>
+                        <div class="popular__location">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z"
+                              fill="white"
+                            />
+                          </svg>
+                          <span>Thailand, Asia</span>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+                <div class="swiper-slide popular__item">
+                  <a href="#" class="popular__link">
+                    <span class="visually-hidden">Sahara Desert</span>
+                    <article class="popular__card">
+                      <picture>
+                        <source
+                          srcset="./../img/destination/4.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/destination/4.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="popular__img"
+                          src="./../img/destination/4.jpg"
+                          alt="Sahara Desert"
+                          loading="lazy"
+                        />
+                      </picture>
+                      <div class="popular__description">
+                        <div class="popular__name">Sahara Desert</div>
+                        <div class="popular__location">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z"
+                              fill="white"
+                            />
+                          </svg>
+                          <span>Merzouga, Africa</span>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+                <div class="swiper-slide popular__item">
+                  <a href="#" class="popular__link">
+                    <span class="visually-hidden"
+                      >Leaning Tower of&#160;Pisa</span
+                    >
+                    <article class="popular__card">
+                      <picture>
+                        <source
+                          srcset="./../img/destination/6.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/destination/6.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="popular__img"
+                          src="./../img/destination/6.jpg"
+                          alt="Leaning Tower of Pisa"
+                          loading="lazy"
+                        />
+                      </picture>
+                      <div class="popular__description">
+                        <div class="popular__name">
+                          Leaning Tower of&#160;Pisa
+                        </div>
+                        <div class="popular__location">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z"
+                              fill="white"
+                            />
+                          </svg>
+                          <span>Pisa, Italy</span>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+                <div class="swiper-slide popular__item">
+                  <a href="#" class="popular__link">
+                    <span class="visually-hidden">Taj Mahal</span>
+                    <article class="popular__card">
+                      <picture>
+                        <source
+                          srcset="./../img/destination/7.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/destination/7.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="popular__img"
+                          src="./../img/destination/7.jpg"
+                          alt="Taj Mahal"
+                          loading="lazy"
+                        />
+                      </picture>
+                      <div class="popular__description">
+                        <div class="popular__name">Taj Mahal</div>
+                        <div class="popular__location">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z"
+                              fill="white"
+                            />
+                          </svg>
+                          <span>Agra, India</span>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section__header section__header-right">
+            <h2 class="section__title">Special Offer</h2>
+            <div class="section__description">
+              Check out our special offer and discounts
+            </div>
+          </header>
+          <div class="section__body offer">
+            <div class="section__controls">
+              <button
+                class="swiper-button-prev section__button button button-dark"
+                type="button"
+              >
+                <span class="visually-hidden"> Previous slide </span>
+                <svg
+                  width="12"
+                  height="22"
+                  viewBox="0 0 12 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 1L1 11L11 21"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                class="swiper-button-next section__button button button-primary"
+                type="button"
+              >
+                <span class="visually-hidden"> Next slide </span>
+                <svg
+                  width="12"
+                  height="22"
+                  viewBox="0 0 12 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 21L11 11L0.999999 1"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="swiper">
+              <div class="swiper-wrapper offer__list">
+                <div class="swiper-slide offer__item">
+                  <article class="offer__card">
+                    <div class="offer__header">
+                      <picture>
+                        <source
+                          srcset="./../img/offers/1.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/offers/1.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="offer__image"
+                          src="./../img/offers/1.jpg"
+                          alt="Lisbon, Portugal"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="offer__description">
+                      <div class="offer__name">Lisbon, Portugal</div>
+                      <div class="offer__rating rating">
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="offer__text">
+                        5 nights and 4 days in&#160;5 star hotel, breakfast and
+                        lunch included. Very popular during the renaissance.
+                        Passage and going through the cites of&#160;the world
+                        in&#160;classical literature.
+                      </div>
+                      <div class="offer__footer">
+                        <div class="offer__price">
+                          <span>From</span>
+                          <span class="offer__amount">&#8364;500</span>
+                        </div>
+                        <a href="#" class="offer__button button button-primary"
+                          >Details</a
+                        >
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide offer__item">
+                  <article class="offer__card">
+                    <div class="offer__header">
+                      <picture>
+                        <source
+                          srcset="./../img/offers/2.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/offers/2.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="offer__image"
+                          src="./../img/offers/2.jpg"
+                          alt="Athens, Greece"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+
+                    <div class="offer__description">
+                      <div class="offer__name">Athens, Greece</div>
+                      <div class="offer__rating rating">
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="offer__text">
+                        5 nights and 4 days in&#160;5 star hotel, breakfast and
+                        lunch included. Very popular during the renaissance.
+                        Passage and going through the cites of&#160;the world
+                        in&#160;classical literature.
+                      </div>
+                      <div class="offer__footer">
+                        <div class="offer__price">
+                          <span>From</span>
+                          <span class="offer__amount">$800</span>
+                        </div>
+                        <a href="#" class="offer__button button button-primary"
+                          >Details</a
+                        >
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide offer__item">
+                  <article class="offer__card">
+                    <div class="offer__header">
+                      <picture>
+                        <source
+                          srcset="./../img/offers/3.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/offers/3.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="offer__image"
+                          src="./../img/offers/3.jpg"
+                          alt="Rome, Italy"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="offer__description">
+                      <div class="offer__name">Rome, Italy</div>
+                      <div class="offer__rating rating">
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="offer__text">
+                        5 nights and 4 days in&#160;5 star hotel, breakfast and
+                        lunch included. Very popular during the renaissance.
+                        Passage and going through the cites of&#160;the world
+                        in&#160;classical literature.
+                      </div>
+                      <div class="offer__footer">
+                        <div class="offer__price">
+                          <span>From</span>
+                          <span class="offer__amount">$750</span>
+                        </div>
+                        <a href="#" class="offer__button button button-primary"
+                          >Details</a
+                        >
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide offer__item">
+                  <article class="offer__card">
+                    <div class="offer__header">
+                      <picture>
+                        <source
+                          srcset="./../img/offers/4.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/offers/4.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="offer__image"
+                          src="./../img/offers/4.jpg"
+                          alt="Sydney, Australia"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="offer__description">
+                      <div class="offer__name">Sydney, Australia</div>
+                      <div class="offer__rating rating">
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="offer__text">
+                        5 nights and 4 days in&#160;5 star hotel, breakfast and
+                        lunch included. Very popular during the renaissance.
+                        Passage and going through the cites of&#160;the world
+                        in&#160;classical literature.
+                      </div>
+                      <div class="offer__footer">
+                        <div class="offer__price">
+                          <span>From</span>
+                          <span class="offer__amount">$950</span>
+                        </div>
+                        <a href="#" class="offer__button button button-primary"
+                          >Details</a
+                        >
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide offer__item">
+                  <article class="offer__card">
+                    <div class="offer__header">
+                      <picture>
+                        <source
+                          srcset="./../img/offers/5.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/offers/5.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="offer__image"
+                          src="./../img/offers/5.jpg"
+                          alt="New York, USA"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="offer__description">
+                      <div class="offer__name">New York, USA</div>
+                      <div class="offer__rating rating">
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="offer__text">
+                        5 nights and 4 days in&#160;5 star hotel, breakfast and
+                        lunch included. Very popular during the renaissance.
+                        Passage and going through the cites of&#160;the world
+                        in&#160;classical literature.
+                      </div>
+                      <div class="offer__footer">
+                        <div class="offer__price">
+                          <span>From</span>
+                          <span class="offer__amount">$950</span>
+                        </div>
+                        <a href="#" class="offer__button button button-primary"
+                          >Details</a
+                        >
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide offer__item">
+                  <article class="offer__card">
+                    <div class="offer__header">
+                      <picture>
+                        <source
+                          srcset="./../img/offers/6.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/offers/6.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="offer__image"
+                          src="./../img/offers/6.jpg"
+                          alt="Rio de Janeiro, Brazil"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="offer__description">
+                      <div class="offer__name">Rio de&#160;Janeiro, Brazil</div>
+                      <div class="offer__rating rating">
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="offer__text">
+                        5 nights and 4 days in&#160;5 star hotel, breakfast and
+                        lunch included. Very popular during the renaissance.
+                        Passage and going through the cites of&#160;the world
+                        in&#160;classical literature.
+                      </div>
+                      <div class="offer__footer">
+                        <div class="offer__price">
+                          <span>From</span>
+                          <span class="offer__amount">$800</span>
+                        </div>
+                        <a href="#" class="offer__button button button-primary"
+                          >Details</a
+                        >
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Our Blog</h2>
+            <div class="section__description">
+              An&#160;insight the incredible experience in&#160;the world
+            </div>
+          </header>
+          <div class="section__body blog">
+            <div class="blog__cover">
+              <picture>
+                <source srcset="./../img/blog/1.webp" type="image/webp" />
+                <source srcset="./../img/blog/1.png" type="image/png" />
+                <img
+                  class="blog__image"
+                  src="./../img/blog/1.png"
+                  alt="Seaview"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="blog__description">
+              <h3 class="blog__title">
+                Beautiful Italy<br />Let&#8217;s travel
+              </h3>
+              <div class="blog__text">
+                But I&#160;must explain to&#160;you how all this mistaken idea
+                of denouncing pleasure and praising pain was born and
+                I&#160;will give you a&#160;complete account of&#160;the system
+                and expound the actual teachings of&#160;the great explorer
+                of&#160;the truth, the master- builder of&#160;human happiness.
+                No&#160;one rejects, dislike, or&#160;avoids plasure itself,
+                because it&#160;is&#160;pleasure, but because those who do not
+                know how to&#160;pursue pleasure rationally encounter
+                consequences that are extremly painful. Nor again is&#160;there
+                anyone who loves or&#160;pursues.
+              </div>
+              <a href="#" class="blog__link">
+                <span>Read More</span>
+                <svg
+                  width="28"
+                  height="16"
+                  viewBox="0 0 28 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M27.7071 8.7071C28.0976 8.31658 28.0976 7.68342 27.7071 7.29289L21.3431 0.92893C20.9526 0.538406 20.3195 0.538406 19.9289 0.92893C19.5384 1.31945 19.5384 1.95262 19.9289 2.34314L25.5858 8L19.9289 13.6569C19.5384 14.0474 19.5384 14.6805 19.9289 15.0711C20.3195 15.4616 20.9526 15.4616 21.3431 15.0711L27.7071 8.7071ZM8.74228e-08 9L27 9L27 7L-8.74228e-08 7L8.74228e-08 9Z"
+                    fill="#FF7757"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Trip Planners</h2>
+            <div class="section__description">
+              20 years from now you will be&#160;more disappointed by&#160;the
+              things that you didn&#8217;t&#160;do. Stop regretting and start
+              travelling, start throwing off the bowlines.
+            </div>
+            <a href="#" class="section__all button button-primary"
+              >View all trip plans</a
+            >
+          </header>
+          <div class="section__body planners">
+            <ul class="planners__list">
+              <li class="planners__item">
+                <a href="#" class="planners__link">
+                  <span class="visually-hidden">Rome City Tour</span>
+                  <article class="planners__card">
+                    <div class="planners__cover">
+                      <picture>
+                        <source
+                          srcset="./../img/planners/1.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/planners/1.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="planners__image"
+                          src="./../img/planners/1.jpg"
+                          alt="Rome City Tour"
+                          width="100%"
+                          height="100%"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="planners__description">
+                      <div class="planners__subtitle">
+                        <span class="planners__category">Guided Tour</span>
+                        <span class="planners__price">&#8364;99/Day</span>
+                      </div>
+                      <h3 class="planners__title">Rome City Tour</h3>
+                      <div class="planners__footer">
+                        <div class="planners__rating rating">
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                        </div>
+                        <div class="planners__duration">7 Days tour</div>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li class="planners__item">
+                <a href="#" class="planners__link">
+                  <span class="visually-hidden">Paris City Tour</span>
+                  <article class="planners__card">
+                    <div class="planners__cover">
+                      <picture>
+                        <source
+                          srcset="./../img/planners/2.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/planners/2.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="planners__image"
+                          src="./../img/planners/2.jpg"
+                          alt="Paris City Tour"
+                          width="100%"
+                          height="100%"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="planners__description">
+                      <div class="planners__subtitle">
+                        <span class="planners__category">Guided Tour</span>
+                        <span class="planners__price">&#8364;95/Day</span>
+                      </div>
+                      <h3 class="planners__title">Paris City Tour</h3>
+                      <div class="planners__footer">
+                        <div class="planners__rating rating">
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                        </div>
+                        <div class="planners__duration">7 Days tour</div>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li class="planners__item">
+                <a href="#" class="planners__link">
+                  <span class="visually-hidden">Barcelona City Tour</span>
+                  <article class="planners__card">
+                    <div class="planners__cover">
+                      <picture>
+                        <source
+                          srcset="./../img/planners/3.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/planners/3.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="planners__image"
+                          src="./../img/planners/3.jpg"
+                          alt="Barcelona City Tour"
+                          width="100%"
+                          height="100%"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="planners__description">
+                      <div class="planners__subtitle">
+                        <span class="planners__category">Guided Tour</span>
+                        <span class="planners__price">&#8364;99/Day</span>
+                      </div>
+                      <h3 class="planners__title">Barcelona City Tour</h3>
+                      <div class="planners__footer">
+                        <div class="planners__rating rating">
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                        </div>
+                        <div class="planners__duration">7 Days tour</div>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li class="planners__item">
+                <a href="#" class="planners__link">
+                  <span class="visually-hidden">Budapest City Tour</span>
+                  <article class="planners__card">
+                    <div class="planners__cover">
+                      <picture>
+                        <source
+                          srcset="./../img/planners/4.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/planners/4.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="planners__image"
+                          src="./../img/planners/4.jpg"
+                          alt="Budapest City Tour"
+                          width="100%"
+                          height="100%"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="planners__description">
+                      <div class="planners__subtitle">
+                        <span class="planners__category">Guided Tour</span>
+                        <span class="planners__price">&#8364;99/Day</span>
+                      </div>
+                      <h3 class="planners__title">Budapest City Tour</h3>
+                      <div class="planners__footer">
+                        <div class="planners__rating rating">
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                          <svg
+                            class="rating__star rating__star-full"
+                            alt="rating star"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                              fill="#55281D"
+                            />
+                          </svg>
+                        </div>
+                        <div class="planners__duration">7 Days tour</div>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Destination Gallery</h2>
+            <div class="section__description">
+              Our photo gallery on&#160;trip
+            </div>
+          </header>
+          <div class="section__body gallery">
+            <ul class="gallery__list">
+              <li class="gallery__item">
+                <picture>
+                  <source srcset="./../img/gallery/1.webp" type="image/webp" />
+                  <source srcset="./../img/gallery/1.jpg" type="image/jpg" />
+                  <img
+                    class="gallery__image"
+                    src="./../img/gallery/1.jpg"
+                    alt="Tourist picture"
+                    width="100%"
+                    height="320"
+                    loading="lazy"
+                  />
+                </picture>
+              </li>
+              <li class="gallery__item">
+                <picture>
+                  <source srcset="./../img/gallery/2.webp" type="image/webp" />
+                  <source srcset="./../img/gallery/2.jpg" type="image/jpg" />
+                  <img
+                    class="gallery__image"
+                    src="./../img/gallery/2.jpg"
+                    alt="Tourist picture"
+                    width="100%"
+                    height="320"
+                    loading="lazy"
+                  />
+                </picture>
+              </li>
+              <li class="gallery__item">
+                <picture>
+                  <source srcset="./../img/gallery/3.webp" type="image/webp" />
+                  <source srcset="./../img/gallery/3.jpg" type="image/jpg" />
+                  <img
+                    class="gallery__image"
+                    src="./../img/gallery/3.jpg"
+                    alt="Tourist picture"
+                    width="100%"
+                    height="320"
+                    loading="lazy"
+                  />
+                </picture>
+              </li>
+              <li class="gallery__item">
+                <picture>
+                  <source srcset="./../img/gallery/4.webp" type="image/webp" />
+                  <source srcset="./../img/gallery/4.jpg" type="image/jpg" />
+                  <img
+                    class="gallery__image"
+                    src="./../img/gallery/4.jpg"
+                    alt="Tourist picture"
+                    width="100%"
+                    height="320"
+                    loading="lazy"
+                  />
+                </picture>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Traveler&#8217;s Experiences</h2>
+            <div class="section__description">
+              Here some awesome feedback from our travelers
+            </div>
+          </header>
+          <div class="section__body reviews">
+            <div class="section__controls">
+              <button
+                class="swiper-button-prev section__button button button-dark"
+                type="button"
+              >
+                <span class="visually-hidden"> Previous slide </span>
+                <svg
+                  width="12"
+                  height="22"
+                  viewBox="0 0 12 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 1L1 11L11 21"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                class="swiper-button-next section__button button button-primary"
+                type="button"
+              >
+                <span class="visually-hidden"> Next slide </span>
+                <svg
+                  width="12"
+                  height="22"
+                  viewBox="0 0 12 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 21L11 11L0.999999 1"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="swiper">
+              <div class="swiper-wrapper reviews__list">
+                <div class="swiper-slide reviews__item">
+                  <blockquote class="review-card">
+                    <div class="review-card__cover">
+                      <picture>
+                        <source
+                          srcset="./../img/reviews/1.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/reviews/1.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="review-card__image"
+                          src="./../img/reviews/1.jpg"
+                          alt="John Doe"
+                          width="100"
+                          height="100"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="review-card__wrapper">
+                      <div class="review-card__body">
+                        I&#160;found the service and response of&#160;this
+                        travel agency to&#160;be&#160;excellent. Without our
+                        wonderful tour guide, and driver this trip would
+                        be&#160;incomplete. Our tour guide was really patient
+                        and understand that people from different cultures and
+                        background would extra time to&#160;absorb all
+                        information about history
+                      </div>
+                      <div class="review-card__rating rating">
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                      </div>
+                      <footer class="review-card__footer">
+                        <cite class="review-card__name">John Doe</cite>
+                        <cite class="review-card__company">Accountant</cite>
+                      </footer>
+                    </div>
+                  </blockquote>
+                </div>
+                <div class="swiper-slide reviews__item">
+                  <blockquote class="review-card">
+                    <div class="review-card__cover">
+                      <picture>
+                        <source
+                          srcset="./../img/reviews/2.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/reviews/2.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="review-card__image"
+                          src="./../img/reviews/2.jpg"
+                          alt="John Smith"
+                          width="100"
+                          height="100"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="review-card__wrapper">
+                      <div class="review-card__body">
+                        But I&#160;must explain to&#160;you how all this
+                        mistaken idea of denouncing pleasure and praising pain
+                        was born and I will give you a&#160;complete account
+                        of&#160;the system and expound the actual teachings
+                        of&#160;the great explorer of the truth, the master-
+                        builder of&#160;human happiness.
+                      </div>
+                      <div class="review-card__rating rating">
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                      </div>
+                      <footer class="review-card__footer">
+                        <cite class="review-card__name">John Smith</cite>
+                        <cite class="review-card__company"
+                          >Journalist, HWO News</cite
+                        >
+                      </footer>
+                    </div>
+                  </blockquote>
+                </div>
+                <div class="swiper-slide reviews__item">
+                  <blockquote class="review-card">
+                    <div class="review-card__cover">
+                      <picture>
+                        <source
+                          srcset="./../img/reviews/3.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/reviews/3.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="review-card__image"
+                          src="./../img/reviews/3.jpg"
+                          alt="Tamara Bellis"
+                          width="100"
+                          height="100"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="review-card__wrapper">
+                      <div class="review-card__body">
+                        But I&#160;must explain to&#160;you how all this
+                        mistaken idea of denouncing pleasure and praising pain
+                        was born and I will give you a&#160;complete account
+                        of&#160;the system and expound the actual teachings
+                        of&#160;the great explorer of the truth, the master-
+                        builder of&#160;human happiness.
+                      </div>
+                      <div class="review-card__rating rating">
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                      </div>
+                      <footer class="review-card__footer">
+                        <cite class="review-card__name">Tamara Bellis</cite>
+                        <cite class="review-card__company"
+                          >Managing Director, JTH</cite
+                        >
+                      </footer>
+                    </div>
+                  </blockquote>
+                </div>
+                <div class="swiper-slide reviews__item">
+                  <blockquote class="review-card">
+                    <div class="review-card__cover">
+                      <picture>
+                        <source
+                          srcset="./../img/reviews/4.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/reviews/4.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="review-card__image"
+                          src="./../img/reviews/4.jpg"
+                          alt="April Miller"
+                          width="100"
+                          height="100"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="review-card__wrapper">
+                      <div class="review-card__body">
+                        But I&#160;must explain to&#160;you how all this
+                        mistaken idea of denouncing pleasure and praising pain
+                        was born and I will give you a&#160;complete account
+                        of&#160;the system and expound the actual teachings
+                        of&#160;the great explorer of the truth, the master-
+                        builder of&#160;human happiness.
+                      </div>
+                      <div class="review-card__rating rating">
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                      </div>
+                      <footer class="review-card__footer">
+                        <cite class="review-card__name">April Miller</cite>
+                        <cite class="review-card__company">Student</cite>
+                      </footer>
+                    </div>
+                  </blockquote>
+                </div>
+                <div class="swiper-slide reviews__item">
+                  <blockquote class="review-card">
+                    <div class="review-card__cover">
+                      <picture>
+                        <source
+                          srcset="./../img/reviews/5.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./../img/reviews/5.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          class="review-card__image"
+                          src="./../img/reviews/5.jpg"
+                          alt="Eric Thomas"
+                          width="100"
+                          height="100"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="review-card__wrapper">
+                      <div class="review-card__body">
+                        The only reason I&#8217;m not giving this travel agency
+                        5-stars is&#160;because our tour was very good, but not
+                        over-the-top fantastic, so&#160;there is&#160;room for
+                        improvement (or, for travellers, some reason
+                        to&#160;consider other options). While a&#160;nice tour,
+                        we&#160;found the English of&#160;our private guide
+                        to&#160;only be&#160;good, not excellent (I&#160;could
+                        only understand about 85 to&#160;90% of&#160;what
+                        he&#160;said), and the tour was somewhat
+                        &#171;standard.&#187;
+                      </div>
+                      <div class="review-card__rating rating">
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star rating__star-full"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                        <svg
+                          class="rating__star"
+                          alt="rating star"
+                          width="60"
+                          height="60"
+                          viewBox="0 0 60 60"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 5.00012L37.725 20.6501L55 23.1751L42.5 35.3502L45.45 52.5502L30 44.4252L14.55 52.5502L17.5 35.3502L5 23.1751L22.275 20.6501L30 5.00012Z"
+                            fill="#55281D"
+                          />
+                        </svg>
+                      </div>
+                      <footer class="review-card__footer">
+                        <cite class="review-card__name">Eric Thomas</cite>
+                        <cite class="review-card__company">Osteopath</cite>
+                      </footer>
+                    </div>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section subscribe">
+        <div class="container">
+          <form class="subscribe__form">
+            <div class="subscribe__form-wrapper">
+              <h2 class="subscribe__form-title">Our Newsletter</h2>
+              <div class="subscribe__form-body">
+                <div class="subscribe__form-field">
+                  <label for="email" class="subscribe__form-label">Email</label>
+                  <input
+                    type="email"
+                    class="subscribe__form-input"
+                    id="email"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <button
+                  class="subscribe__form-button button button-primary"
+                  type="submit"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner container">
+        <div class="footer__row">
+          <a href="#" class="footer__logo logo">
+            <img
+              src="./../img/logo-white.svg"
+              alt="Travellian"
+              class="logo__image"
+              width="288"
+              height="45"
+              loading="lazy"
+            />
+          </a>
+          <div class="footer__copyright">
+            Copyright &#169; Travellian 2024 All rights reserved
+          </div>
+        </div>
+        <div class="footer__row">
+          <h2 class="footer__title">Menu</h2>
+          <nav class="footer__menu">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Home</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Explore</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Travel</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Blog</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Pricing</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__row">
+          <h2 class="footer__title">Information</h2>
+          <nav class="footer__menu">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Destinations</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Supports</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Terms & Conditions</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Privacy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__row footer__contacts">
+          <h2 class="footer__title">Contact Info</h2>
+          <ul class="footer__contacts-list">
+            <li class="footer__contacts-item">
+              <a href="tel:+123456789" class="footer__contacts-link"
+                >+123 456 789</a
+              >
+            </li>
+            <li class="footer__contacts-item">
+              <a href="mailto:info@travellian.com" class="footer__contacts-link"
+                >info@travellian.com</a
+              >
+            </li>
+            <li class="footer__contacts-item">
+              <address>1245, New Yourk, USA</address>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__row footer__soc1als">
+          <h2 class="footer__title">Follow us&#160;on</h2>
+          <ul class="footer__soc1als-list">
+            <li class="footer__soc1als-item">
+              <a href="#" class="footer__soc1als-link" target="_blank">
+                <span class="visually-hidden">Pinterest</span>
+                <svg
+                  width="40"
+                  height="41"
+                  viewBox="0 0 40 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M36.0002 20.5889C36.2402 11.4289 28.8802 3.98885 19.7602 4.10885C11.0002 4.22885 3.92018 11.4689 4.00018 20.2289C4.04018 26.5089 7.72018 31.9089 13.0002 34.5089C13.3202 34.6689 13.6802 34.4289 13.6402 34.0689C13.6002 33.0289 13.6402 31.9489 13.8402 31.0689C14.0402 30.1889 14.8402 26.8289 15.3602 24.6289C15.6002 23.5489 15.6402 22.4289 15.4402 21.3489C15.3602 20.9889 15.3202 20.5889 15.3202 20.1089C15.3202 17.7489 16.6802 15.9889 18.4002 15.9889C19.8402 15.9889 20.5602 17.0689 20.5602 18.3889C20.5602 19.8289 19.6402 22.0289 19.1602 24.0689C18.7602 25.7489 20.0002 27.1489 21.6802 27.1489C24.7202 27.1489 27.0402 23.9489 27.0402 19.3489C27.0402 15.2689 24.1202 12.4289 19.9202 12.4289C15.0802 12.4289 12.2402 16.0689 12.2402 19.8289C12.2402 21.3089 12.8002 22.8689 13.5202 23.7089C13.6402 23.8689 13.6802 24.0289 13.6402 24.1889C13.5202 24.7089 13.2402 25.8689 13.1602 26.1089C13.0802 26.4289 12.9202 26.4689 12.6002 26.3489C10.4802 25.3089 9.12018 22.1889 9.12018 19.7089C9.12018 14.3489 13.0002 9.42885 20.3602 9.42885C26.2402 9.42885 30.8402 13.6289 30.8402 19.2689C30.8402 25.1489 27.1602 29.8289 22.0002 29.8289C20.6402 29.8289 19.3602 29.2689 18.6002 28.5089C18.3602 28.2689 17.9602 28.3889 17.8802 28.7089C17.6002 29.7089 17.2002 31.3889 17.0402 31.9089C16.8002 32.8689 16.2802 33.9888 15.7202 34.9888C15.5602 35.2288 15.7202 35.5889 16.0002 35.6289C17.3202 35.9489 18.6802 36.1488 20.0802 36.1089C28.5602 36.0289 35.7602 28.9889 36.0002 20.5889Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="footer__soc1als-item">
+              <a href="#" class="footer__soc1als-link" target="_blank">
+                <span class="visually-hidden">Twitter</span>
+                <svg
+                  width="32"
+                  height="33"
+                  viewBox="0 0 32 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M28.768 8.17201C27.808 8.58801 26.816 8.87601 25.76 9.00401C26.848 8.36401 27.68 7.34001 28.064 6.09201C27.04 6.70001 25.92 7.11601 24.736 7.37201C23.776 6.34801 22.4 5.70801 20.896 5.70801C17.984 5.70801 15.648 8.07601 15.648 10.956C15.648 11.372 15.68 11.756 15.776 12.14C11.424 11.948 7.58397 9.83601 4.99197 6.66801C3.13597 9.99601 5.21597 12.748 6.59197 13.676C5.75997 13.676 4.92797 13.42 4.22397 13.036C4.22397 15.628 6.04797 17.772 8.41597 18.252C7.90397 18.412 6.75197 18.508 6.04797 18.348C6.71997 20.428 8.67197 21.964 10.944 21.996C9.15197 23.404 6.52797 24.524 3.16797 24.172C5.50397 25.676 8.25597 26.54 11.232 26.54C20.896 26.54 26.144 18.54 26.144 11.628C26.144 11.404 26.144 11.18 26.112 10.956C27.2 10.156 28.096 9.22801 28.768 8.17201Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="footer__soc1als-item">
+              <a href="#" class="footer__soc1als-link" target="_blank">
+                <span class="visually-hidden">Youtube</span>
+                <svg
+                  width="800px"
+                  height="800px"
+                  viewBox="0 -3 20 20"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <g
+                    id="Page-1"
+                    stroke="none"
+                    stroke-width="1"
+                    fill="none"
+                    fill-rule="evenodd"
+                  >
+                    <g
+                      id="Dribbble-Light-Preview"
+                      transform="translate(-300.000000, -7442.000000)"
+                      fill="#000000"
+                    >
+                      <g
+                        id="icons"
+                        transform="translate(56.000000, 160.000000)"
+                      >
+                        <path
+                          d="M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289"
+                          id="youtube-[#168]"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="mobile__overlay visible-desktop" id="mobileOverlay">
+      <form class="mobile__overlay__close-button-wrapper" method="dialog">
+        <button
+          class="mobile__overlay__close-button cross-button"
+          type="submit"
+        >
+          <span class="visually-hidden">Close menu</span>
+        </button>
+      </form>
+      <div class="mobile__overlay__body">
+        <ul class="mobile__overlay-list">
+          <li class="mobile__overlay-item">
+            <a href="#" class="mobile__overlay-link">Home</a>
+          </li>
+          <li class="mobile__overlay-item">
+            <a href="#" class="mobile__overlay-link">Explore</a>
+          </li>
+          <li class="mobile__overlay-item">
+            <a href="#" class="mobile__overlay-link">Travel</a>
+          </li>
+          <li class="mobile__overlay-item">
+            <a href="#" class="mobile__overlay-link">Blog</a>
+          </li>
+          <li class="mobile__overlay-item">
+            <a href="#" class="mobile__overlay-link">Pricing</a>
+          </li>
+        </ul>
+      </div>
+    </dialog>
+  </body>
+</html>

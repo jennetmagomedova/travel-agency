@@ -1,0 +1,32 @@
+.button {
+  @include reset-button;
+  color: var(--color-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 22px;
+
+  @include hover {
+    color: var(--color-primary);
+  }
+
+  &-primary {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+
+    @include hover {
+      opacity: 0.8;
+      color: var(--color-light);
+    }
+  }
+
+  &-dark {
+    background-color: var(--color-dark);
+    outline-color: var(--color-primary);
+
+    @include hover {
+      opacity: 0.8;
+      color: var(--color-light);
+    }
+  }
+}

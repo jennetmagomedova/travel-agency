@@ -1,0 +1,15 @@
+.rating {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+
+  &__star {
+    @include square(24px);
+    color: transparent;
+    stroke: var(--color-yellow);
+
+    &-full {
+      color: var(--color-yellow);
+    }
+  }
+}

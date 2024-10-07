@@ -1,0 +1,124 @@
+.section {
+  &:not(:last-child) {
+    margin-bottom: 80px;
+
+    @include desktop-above {
+      margin-bottom: 100px;
+    }
+
+    @include desktop-l-above {
+      margin-bottom: 140px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 100px;
+
+    &-right {
+      @include tablet-above {
+        text-align: right;
+      }
+
+      & > .section__title:after {
+        @include tablet-above {
+          left: unset;
+          right: 0;
+        }
+      }
+
+      & > .section__description {
+        @include tablet-above {
+          max-width: unset;
+        }
+      }
+
+      & + .section__body > .section__controls {
+        @include desktop-above {
+          right: unset;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: var(--color-primary);
+
+      @include tablet-above {
+        width: 70%;
+      }
+    }
+  }
+
+  &__description {
+    color: var(--color-gray);
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    @include tablet-above {
+      max-width: 744px;
+    }
+
+    @include desktop-l-above {
+      max-width: unset;
+    }
+  }
+
+  &__body {
+    position: relative;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    margin-bottom: 60px;
+
+    @include mobile-above {
+      margin-bottom: 100px;
+    }
+
+    @include desktop-above {
+      justify-content: space-between;
+      position: absolute;
+      top: -166px;
+      right: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__button {
+    margin: 0;
+    position: relative;
+    left: unset;
+    right: unset;
+    width: 60px;
+    height: 66px;
+    border-radius: var(--border-radius-small);
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
+  &__all {
+    padding: 20px;
+    border-radius: var(--border-radius-small);
+  }
+}

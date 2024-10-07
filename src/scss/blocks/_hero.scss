@@ -1,0 +1,30 @@
+.hero {
+  padding-block: 200px 100px;
+  background: url("./../../img/hero/hero-320.png") center/cover no-repeat;
+  color: var(--color-light);
+
+  @include mobile-above {
+    background-image: url("./../../img/hero/hero-768.png");
+  }
+
+  @include tablet-above {
+    background-image: url("./../../img/hero/hero-1152.webp");
+  }
+
+  @include desktop-above {
+    padding-top: 270px;
+    background-image: url("./../../img/hero/hero-1440.webp");
+  }
+
+  @include desktop-l-above {
+    background-image: url("./../../img/hero/hero-1920.webp");
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    margin-bottom: 100px;
+  }
+}
